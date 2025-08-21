@@ -1,0 +1,121 @@
+[
+	{
+		"任务": "发布一个帖子",
+		"步骤": [
+					{
+						"描述":"模仿一名大学生，编辑帖子内容并发布帖子",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/addpost",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"article": "帖子内容，内容自由发挥，String类型",
+								"title": "帖子标题，内容自由发挥，String类型",
+								"pictrueList": "帖子图片列表，List<String>类型，固定只有一个图片: 17-01.jpg"
+							}
+						}
+					}
+				]
+	}
+	{
+		"任务": "浏览帖子，根据帖子内容评论，内容自己发挥（可选）",
+		"步骤": [
+					{
+						"描述":"获取一个帖子并浏览帖子",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/getOnePost",
+							"method": "POST",
+							"params": {},
+							"body": {}
+						}
+					},
+					{
+						"描述":"评论帖子[可选]",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/comment",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"commentContext": "评论内容,自己生成",
+								"postId": "帖子id,从上一步中获取,Integer类型",
+								"type": 20
+							}
+						}
+					}
+		]
+	},
+	{
+		"任务": "审核帖子，如果帖子内容可能造成不良影响，例如有脏话，涉嫌黄赌毒，请拒绝通过审核",
+		"步骤": [
+					{
+						"描述":"获取一个待审核的帖子",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/getUnAuditedPost",
+							"method": "POST",
+							"params": {},
+							"body": {}
+						}
+					},
+					{
+						"描述":"这个帖子没有问题，通过审核[二选一]",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/auditPost",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"postId": "帖子id,从上一步中获取,Integer类型"
+							}
+						}
+					},
+					{
+						"描述":"这个帖子可能造成不良影响，拒绝通过审核[二选一]",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/rejectPost",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"postId": "帖子id,从上一步中获取,Integer类型"
+							}
+						}
+					}
+		]
+	},
+	{
+		"任务": "审核评论，如果评论可能造成不良影响，例如有脏话，涉嫌黄赌毒，请拒绝通过审核",
+		"步骤": [
+					{
+						"描述":"获取一个待审核的评论",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/getUnAuditedComment",
+							"method": "POST",
+							"params": {},
+							"body": {}
+						}
+					},
+					{
+						"描述":"这个评论没有问题，通过审核[二选一]",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/auditComment",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"commentId": "评论ID，从上一步中获取,Integer类型",
+								"type": "评论类型,从上一步中获取,Integer类型"
+							}
+						}
+					},
+					{
+						"描述":"这个评论可能造成不良影响，拒绝通过审核[二选一]",
+						"动作":{
+							"url": "http://localhost:8080/api/digital/rejectComment",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"commentId": "评论ID，从上一步中获取，Integer类型",
+								"type": "评论类型,从上一步中获取,Integer类型"
+							}
+						}
+					}
+		]
+	}
+]

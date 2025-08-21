@@ -1,0 +1,81 @@
+[
+	{
+		"任务": "把大象放进冰箱",
+		"步骤": [
+					{
+						"描述":"打开冰箱门",
+						"动作":{
+							"url": "https://localhost:8080/opendoor",
+							"method": "GET",
+							"params": {},
+							"body": ""
+						}
+					},
+					{
+						"描述":"放大象进冰箱",
+						"动作":{
+							"url": "https://localhost:8080/put",
+							"method": "GET",
+							"params": {},
+							"body": ""
+						}
+					},
+					{
+						"描述":"关上冰箱门",
+						"动作":{
+							"url": "https://localhost:8080/closedoor",
+							"method": "GET",
+							"params": {},
+							"body": ""
+						},
+						"是否最后步骤": 是
+
+					}
+				]
+	},
+	{
+		"任务": "发布一个帖子",
+		"步骤": [
+					{
+						"描述":"打开“校猫日记”APP",
+						"动作":""
+					},
+					{
+						"描述":"编辑帖子内容并发布帖子",
+						"动作":{
+							"url": "https://localhost:8080/sent/post",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"content": "帖子内容，自己生成"
+								"title": "帖子标题，自己生成"
+								"tag": "帖子标签，自己生成"
+							}
+						}
+					},
+					{
+						"描述":"关闭APP",
+						"动作":"",
+						"是否最后步骤": 是
+					}
+				]
+	},
+	{
+		"任务": "登录校猫日记平台",
+		"步骤": [
+					{
+						"描述":"登录",
+						"动作":{
+							"url": "https://localhost:8080/api/user/login",
+							"method": "POST",
+							"params": {},
+							"body": {
+								"username": "robot1",
+								"password": "a1111111"
+							}
+						}
+					}
+		]
+	}
+
+]

@@ -1,0 +1,31 @@
+server:
+  port: 8088
+
+spring:
+  ai:
+    dashscope:
+      # 请在这里填入你的通义千问API密钥
+      api-key: ${DASHSCOPE_API_KEY:your_dashscope_api_key_here}
+      chat:
+        options:
+          # 使用的模型版本
+          model: qwen-turbo-2025-07-15
+
+# 数字生命配置
+digital-life:
+  # 自动启动配置
+  auto-start:
+    enabled: true
+    delay: 5  # 启动延迟秒数
+  
+  # 认证配置
+  auth:
+    # 永久token，用于API认证
+    # 格式：Bearer your_token_here 或 your_token_here
+    permanent-token: "Bearer your_permanent_token_here"
+
+# 日志配置
+logging:
+  level:
+    com.randb.digitaldemo1: INFO
+    com.randb.springaichatstarter: INFO

@@ -1,0 +1,28 @@
+<configuration>
+
+    <!-- Root 控制台输出，显示所有普通日志 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 只显示带 MAINFLOW Marker 的日志 -->
+    <appender name="MAIN" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 可以加颜色或高亮 -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- root logger 输出普通日志 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- 自定义 logger 输出 MAINFLOW -->
+    <logger name="MainFlowExample" additivity="false" level="INFO">
+        <appender-ref ref="MAIN"/>
+    </logger>
+
+</configuration>

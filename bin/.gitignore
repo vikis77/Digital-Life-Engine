@@ -31,11 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-# 本地配置和敏感文件
-src\main\resources\ability-copy.txt
-src\main\resources\application.yml
-src\main\resources\tasks-copy.txt
-数字生命系统使用指南.md
-永久Token配置说明.md
-真正通用的数字生命设计.md
