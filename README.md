@@ -40,7 +40,7 @@ input中有：我是谁（我是一个数字生命。），我的任务是什么
 
 ## 🧩 图例说明
 ### 实际运行说明
-![图例](src\main\resources\readme-pic1.png)
+![图例](readme-pic1.png)
 用户设置好任务（tasks）和能力（ability），数字生命将不断的自动执行任务并集成能力，这个过程从数字生命开始时开始，到数字生命结束时结束。
 
 如图实例：
@@ -50,7 +50,7 @@ input中有：我是谁（我是一个数字生命。），我的任务是什么
 4. 任务完成后，会继续执行下一个任务。
 
 ### 任务能力说明
-![图例](src\main\resources\readme-pic2.png)
+![图例](readme-pic2.png)
 数字生命可以像人类一样思考，并执行任务。
 
 像普通用户一样，发一个帖子，浏览帖子，是否评论帖子等等。
@@ -60,7 +60,7 @@ input中有：我是谁（我是一个数字生命。），我的任务是什么
 **经作者本地测试，上图多任务运行正常，无异常。** 测试的系统为作者的另一个项目：https://github.com/vikis77/PawprintDiaries-H5（前端）、https://github.com/vikis77/PawprintDiaries-SpringBoot（后端）。
 
 ### 架构逻辑说明
-![图例](src\main\resources\readme-pic3.png)
+![图例](readme-pic3.png)
 这是当前项目进度的粗略架构图和实现逻辑，这里用到了作者的另一个项目 Spring-Ai-Chat-Starter，用于快速集成LLM能力。项目GitHub地址: https://github.com/vikis77/Spring-AI-Chat-Starter
 本项目的具体实现逻辑，例如怎么配置 Spring-AI-Chat-Starter，怎么配置 Priompt，怎么执行动作，怎么判断任务，欢迎 fock 本项目去看。
 
