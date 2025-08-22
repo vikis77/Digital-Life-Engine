@@ -57,8 +57,9 @@ input中有：我是谁（我是一个数字生命。），我的任务是什么
 
 像审核人员一样，审核帖子是否违规，是否通过审核或拒绝通过等等。
 
-**经作者本地测试，上图多任务运行正常，无异常。** 测试的系统为作者的另一个项目：https://github.com/vikis77/PawprintDiaries-H5、
-https://github.com/vikis77/PawprintDiaries-SpringBoot。
+**经作者本地测试，上图多任务运行正常，无异常。** 测试的系统为作者的另一个项目：
+https://github.com/vikis77/PawprintDiaries-H5
+https://github.com/vikis77/PawprintDiaries-SpringBoot
 
 ### 架构逻辑说明
 ![图例](readme-pic3.png)
