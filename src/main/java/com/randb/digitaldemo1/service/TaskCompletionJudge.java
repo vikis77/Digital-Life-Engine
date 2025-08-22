@@ -80,10 +80,8 @@ public class TaskCompletionJudge {
         prompt.append("判断规则：\n");
         prompt.append("1. 仔细分析任务名称的核心要求\n");
         prompt.append("2. 检查执行历史是否已经满足任务要求\n");
-        prompt.append("3. 特别注意：如果任务是'发布帖子'且已经发布成功，应该完成\n");
-        prompt.append("4. 特别注意：如果任务是'审核'且已经审核完成，应该完成\n");
-        prompt.append("5. 特别注意：如果查询类操作返回空数据，通常应该完成\n");
-        prompt.append("6. 避免无限循环：如果核心任务已完成，不要因为可以做更多事情就不结束\n\n");
+        prompt.append("3. 特别注意：如果查询类操作返回空数据，通常应该完成\n");
+        prompt.append("4. 避免无限循环：如果核心任务已完成，不要因为可以做更多事情就不结束\n\n");
         
         prompt.append("请严格按照以下JSON格式回复：\n");
         prompt.append("{\n");

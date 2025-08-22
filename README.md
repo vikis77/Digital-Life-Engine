@@ -38,6 +38,32 @@ input中有：我是谁（我是一个数字生命。），我的任务是什么
 - **数据提取**：智能提取和格式化API响应数据
 - **认证管理**：自动处理token认证
 
+## 🧩 图例说明
+### 实际运行说明
+![图例](src\main\resources\readme-pic1.png)
+用户设置好任务（tasks）和能力（ability），数字生命将不断的自动执行任务并集成能力，这个过程从数字生命开始时开始，到数字生命结束时结束。
+
+如图实例：
+1. 设置任务，把大象放进冰箱并关上门。
+2. 设置能力，打开冰箱门、放大象进冰箱、关上冰箱门。
+3. 数字生命开始执行任务，并集成能力，最终完成任务。
+4. 任务完成后，会继续执行下一个任务。
+
+### 任务能力说明
+![图例](src\main\resources\readme-pic2.png)
+数字生命可以像人类一样思考，并执行任务。
+
+像普通用户一样，发一个帖子，浏览帖子，是否评论帖子等等。
+
+像审核人员一样，审核帖子是否违规，是否通过审核或拒绝通过等等。
+
+**经作者本地测试，上图多任务运行正常，无异常。** 测试的系统为作者的另一个项目：https://github.com/vikis77/PawprintDiaries-H5（前端）、https://github.com/vikis77/PawprintDiaries-SpringBoot（后端）。
+
+### 架构逻辑说明
+![图例](src\main\resources\readme-pic3.png)
+这是当前项目进度的粗略架构图和实现逻辑，这里用到了作者的另一个项目 Spring-Ai-Chat-Starter，用于快速集成LLM能力。项目GitHub地址: https://github.com/vikis77/Spring-AI-Chat-Starter
+本项目的具体实现逻辑，例如怎么配置 Spring-AI-Chat-Starter，怎么配置 Priompt，怎么执行动作，怎么判断任务，欢迎 fock 本项目去看。
+
 ## 🚀 快速开始
 
 ### 环境要求
@@ -176,7 +202,7 @@ digital-life:
 
 ## 🤝 贡献指南
 
-我们欢迎所有形式的贡献！
+如果你对这个项目感兴趣，我们欢迎所有形式的贡献！
 
 ### 如何贡献
 
@@ -207,8 +233,8 @@ digital-life:
 
 如有问题或建议，请通过以下方式联系：
 
-- 提交 [Issue](https://github.com/your-username/digital-life-engine/issues)
-- 发送邮件至: your-email@example.com
+- 提交 [Issue](https://github.com/vikis77/Digital-Life-Engine/issues)
+- 发送邮件至: qin2607994895@gmail.com
 
 ---
 
