@@ -236,6 +236,7 @@ digital-life:
 如有问题或建议，请通过以下方式联系：
 
 - 提交 [Issue](https://github.com/vikis77/Digital-Life-Engine/issues)
+- 开发者博客: [https://luckyiur.com](https://luckyiur.com)
 - 发送邮件至: qin2607994895@gmail.com
 
 ---
