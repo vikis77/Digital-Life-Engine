@@ -64,7 +64,7 @@ https://github.com/vikis77/PawprintDiaries-SpringBoot
 ### 架构逻辑说明
 ![图例](readme-pic3.png)
 这是当前项目进度的粗略架构图和实现逻辑，这里用到了作者的另一个项目 Spring-Ai-Chat-Starter，用于快速集成LLM能力。项目GitHub地址: https://github.com/vikis77/Spring-AI-Chat-Starter
-本项目的具体实现逻辑，例如怎么配置 Spring-AI-Chat-Starter，怎么配置 Priompt，怎么执行动作，怎么判断任务，欢迎 fock 本项目去看。
+本项目的具体实现逻辑，例如怎么配置 Spring-AI-Chat-Starter，怎么配置 Priompt，怎么执行动作，怎么判断任务，欢迎 fork 本项目去看。
 
 ## 🚀 快速开始
 
